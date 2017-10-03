@@ -1,0 +1,13 @@
+<div>
+    <form action="">
+        <label for="idea">Dime una idea</label>
+        <input type="text" name="idea" id="idea" [(ngModel)]="idea">
+        <button (click)="addIdea()">Añadir</button>
+    </form>
+    <div *ngIf="aIdeas.length > 0">
+        <p>Lista de ideas</p>
+        <ul>
+          <li *ngFor="let idea of aIdeas">{{idea}}</li>
+        </ul>    
+    </div>
+</div>

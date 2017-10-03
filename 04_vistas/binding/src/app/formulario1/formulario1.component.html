@@ -1,0 +1,19 @@
+<p>
+  <label for="input-name">Escribe tu nombre</label>
+  <input id="input-name" type="text" 
+  [ngModel]="sName"
+  (ngModelChange) = 'sName = $event'>
+</p>
+<p>
+  Hola {{sName}}
+</p>
+<h2>Banana in a Box</h2>
+
+<p>
+    <label for="input-name2">Escribe tu nombre</label>
+    <input id="input-name2" type="text" 
+    [(ngModel)]="sName">
+  </p>
+  <p>
+    Hola {{sName}}
+  </p>
