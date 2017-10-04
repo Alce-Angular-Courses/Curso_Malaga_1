@@ -4,10 +4,47 @@
         <input type="text" name="idea" id="idea" [(ngModel)]="idea">
         <button (click)="addIdea()">Añadir</button>
     </form>
-    <div *ngIf="aIdeas.length > 0">
+
+
+    <div *ngIf="aIdeas.length > 0; then hayIdeas else sinIdeas"></div>
+
+
+    <ng-template #hayIdeas class="lista">
         <p>Lista de ideas</p>
         <ul>
           <li *ngFor="let idea of aIdeas">{{idea}}</li>
         </ul>    
-    </div>
+    
+    </ng-template> 
+    
+    <ng-template #sinIdeas>
+        <p>Escribe alguna idea</p> 
+    </ng-template> 
+
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 </div>
